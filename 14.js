@@ -8,9 +8,9 @@
  * license MIT
  */
 
-( function ( $ ) {
+( function () {
     "use strict";
-    $.dlxQuiz = function ( element, options ) {
+    dlxQuiz = function ( element, options ) {
       var plugin = this,
         $element = $( element ),
         _element_id = $element.attr( 'id' ),
