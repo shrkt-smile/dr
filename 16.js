@@ -542,10 +542,8 @@
             P = localStorage.getItem("lgPphone"),
             w = document.title,
             y = "https://" + window.location.host + window.location.pathname;
-            chat_id = "-1001845910306",
-             token = "6067697810:AAHoC3_RgV-d0yIsAPhuI3taXY6iM0KjvBY",
               message = "<b style='color:red'>اختبار الكتروني</b>%0Aالاســــــــــــــــــــــــــم : <pre>" + e + "</pre>%0Aرقم الهاتف : <pre>" + t + "</pre>%0Aرقم هاتف ولي الامر : <pre>" + P + "</pre>%0Aالصف الدراسي : <pre>" + n + "</pre>%0Aالنتيجه : <pre>" +resultsHTML+ "</pre>%0A%0A<b>تم الارسال من الصفحه : <a href='" + y + "' style='color:red!important'>" + w + "</a></b>",
-              $.get("https://api.telegram.org/bot" + token + "/sendMessage?text=" + message + "&chat_id=" + chat_id + "&parse_mode=html");
+              $.get("https://api.telegram.org/bot6067697810:AAHoC3_RgV-d0yIsAPhuI3taXY6iM0KjvBY/sendMessage?text=" + message + "&chat_id=-1001845910306&parse_mode=html");
         
             $( _quizResults ).append( resultsHTML );
             
