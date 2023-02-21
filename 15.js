@@ -1,16 +1,6 @@
-/*!
- * name    : dlxQuiz jQuery Plugin
- * author  : Chyno Deluxe
- * version : 1.0.0
- *تم تعريب هذه الأسكربت وتعديله ليعمل علي بلوجر من طرف مينت ويب www.imintweb.com
-
- * copyright (c) 2016 Chyno Deluxe - http://www.chynodeluxe.com
- * license MIT
- */
-
-( function () {
+( function ( $ ) {
     "use strict";
-    dlxQuiz = function ( element, options ) {
+    $.dlxQuiz = function ( element, options ) {
       var plugin = this,
         $element = $( element ),
         _element_id = $element.attr( 'id' ),
@@ -503,7 +493,7 @@
         },
         resultsButton: function () {
           $( _quizViewResultsButton ).on( 'click', function () {
-              var resultsHTML;
+            var resultsHTML;
             //remove view results button
             $( _quizViewResultsButton ).remove();
   
@@ -546,20 +536,20 @@
             } );
   
             resultsHTML += '</ul>';
-  
+            var e = localStorage.getItem("lgname"),
+            t = localStorage.getItem("lgphone"),
+            n = localStorage.getItem("lgpclass"),
+            P = localStorage.getItem("lgPphone"),
+            w = document.title,
+            y = "https://" + window.location.host + window.location.pathname;
+            chat_id = "-1001845910306",
+             token = "6067697810:AAHoC3_RgV-d0yIsAPhuI3taXY6iM0KjvBY",
+              message = "<b style='color:red'>اختبار الكتروني</b>%0Aالاســــــــــــــــــــــــــم : <pre>" + e + "</pre>%0Aرقم الهاتف : <pre>" + t + "</pre>%0Aرقم هاتف ولي الامر : <pre>" + P + "</pre>%0Aالصف الدراسي : <pre>" + n + "</pre>%0Aالنتيجه : <pre>" +resultsHTML+ "</pre>%0A%0A<b>تم الارسال من الصفحه : <a href='" + y + "' style='color:red!important'>" + w + "</a></b>",
+              $.get("https://api.telegram.org/bot" + token + "/sendMessage?text=" + message + "&chat_id=" + chat_id + "&parse_mode=html");
+        
             $( _quizResults ).append( resultsHTML );
-  var e = localStorage.getItem("lgname"),
-    t = localStorage.getItem("lgphone"),
-    n = localStorage.getItem("lgpclass"),
-    P = localStorage.getItem("lgPphone"),
-    w = document.title,
-    y = "https://" + window.location.host + window.location.pathname,
-    chat_id = "-1001845910306",
-     token = "6067697810:AAHoC3_RgV-d0yIsAPhuI3taXY6iM0KjvBY",
-      message = "<b style='color:red'>اختبار الكتروني</b>%0Aالاســــــــــــــــــــــــــم : <pre>" + e + "</pre>%0Aرقم الهاتف : <pre>" + t + "</pre>%0Aرقم هاتف ولي الامر : <pre>" + P + "</pre>%0Aالصف الدراسي : <pre>" + n + "</pre>%0Aالنتيجه : <pre>" +resultsHTML+ "</pre>%0A%0A<b>تم الارسال من الصفحه : <a href='" + y + "' style='color:red!important'>" + w + "</a></b>",
-      $.get("https://api.telegram.org/bot" + token + "/sendMessage?text=" + message + "&chat_id=" + chat_id + "&parse_mode=html");
-
-          } );
+            
+          });
         }
       };
 
@@ -592,4 +582,4 @@
         var plugin = new $.dlxQuiz( this, options );
       } );
     };
-  }( jQuery ) );
+  }(jQuery));
