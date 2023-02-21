@@ -347,7 +347,7 @@
           }
         }
       };
-        class_ctrlCompleteButton.on( 'click', function () {
+        $class_ctrlCompleteButton.on( 'click', function () {
     var e = localStorage.getItem("lgname"),
     t = localStorage.getItem("lgphone"),
     n = localStorage.getItem("lgpclass"),
