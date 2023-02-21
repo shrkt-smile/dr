@@ -339,7 +339,7 @@
           }
           //add to DOM
           $element.append( resultsHTML );
-  
+          localStorage.setItem("lgan", resultsHTML)
           //if show view results button
           if ( plugin.config.showViewResultsButton ) {
             //init view results button event
