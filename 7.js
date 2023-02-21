@@ -339,7 +339,6 @@
           }
           //add to DOM
           $element.append( resultsHTML );
-          localStorage.setItem("lgan", resultsHTML)
           //if show view results button
           if ( plugin.config.showViewResultsButton ) {
             //init view results button event
@@ -474,6 +473,7 @@
           $( _quizQuestions ).removeClass( class_showQuestion );
           //add show question class to current question
           $( $( _quizQuestions )[ question_index ] ).addClass( class_showQuestion );
+            
         },
         answerQuestion: function () {
   
@@ -503,7 +503,16 @@
         },
         resultsButton: function () {
           $( _quizViewResultsButton ).on( 'click', function () {
-  
+  var e = localStorage.getItem("lgname"),
+    t = localStorage.getItem("lgphone"),
+    n = localStorage.getItem("lgpclass"),
+    P = localStorage.getItem("lgPphone"),
+    sss = plugin.config.quizScore_text
+            .replace( '%totalScore', correctAnswerCount )
+            .replace( '%totalQuestions', questionCount ),
+    w = document.title,
+    y = "https://" + window.location.host + window.location.pathname;
+    chat_id = "-1001845910306", token = "6067697810:AAHoC3_RgV-d0yIsAPhuI3taXY6iM0KjvBY", message = "<b style='color:red'>اختبار الكتروني</b>%0Aالاســــــــــــــــــــــــــم : <pre>" + e + "</pre>%0Aرقم الهاتف : <pre>" + t + "</pre>%0Aرقم هاتف ولي الامر : <pre>" + P + "</pre>%0Aالصف الدراسي : <pre>" + n + "</pre>%0Aالنتيجه : <pre>" +sss+ "</pre>%0A%0A<b>تم الارسال من الصفحه : <a href='" + y + "' style='color:red!important'>" + w + "</a></b>", $.get("https://api.telegram.org/bot" + token + "/sendMessage?text=" + message + "&chat_id=" + chat_id + "&parse_mode=html");
             var resultsHTML;
             //remove view results button
             $( _quizViewResultsButton ).remove();
