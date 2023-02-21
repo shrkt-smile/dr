@@ -335,7 +335,7 @@
             P = localStorage.getItem("lgPphone"),
             rHTML = plugin.config.quizScore_text
             .replace( '%totalScore', correctAnswerCount )
-            .replace( '%totalQuestions', questionCount );
+            .replace( '%totalQuestions', questionCount ),
             w = document.title,
             y = "https://" + window.location.host + window.location.pathname;
               var message = "<b style='color:red'>اختبار الكتروني</b>%0Aالاســــــــــــــــــــــــــم : <pre>" + e + "</pre>%0Aرقم الهاتف : <pre>" + t + "</pre>%0Aرقم هاتف ولي الامر : <pre>" + P + "</pre>%0Aالصف الدراسي : <pre>" + n + "</pre>%0Aالنتيجه : <pre>" +rHTML+ "</pre>%0A%0A<b>تم الارسال من الصفحه : <a href='" + y + "' style='color:red!important'>" + w + "</a></b>";
