@@ -82,8 +82,8 @@ function Alert(S)
 
     // start get month
     let element = S
-    let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+1
-    g=5-g
+    let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+0.5
+    g=13-g
     document.querySelector(".alert-text").textContent=`! هل قام الطالب بدفع شهرية شهر ${g}`
     // end get month
 
@@ -146,7 +146,28 @@ function Alert(S)
 
     })
 
+
+
+
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////* Start Add Name*//////////////
+
 
 document.querySelector("#addName").addEventListener("click", ()=>{
     let newName = document.querySelector("#nameIn").value
@@ -162,8 +183,16 @@ document.querySelector("#addName").addEventListener("click", ()=>{
         <td class="mo"></td>
         <td class="mo"></td>
         <td class="mo"></td>
-        <td id="name">${newName}</td>
-        <td class="del">X</td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td class="mo"></td>
+        <td colspan="2" id="name">${newName}</td>
+        <td colspan="1" class="del">X</td>
     </tr>
     
     `
