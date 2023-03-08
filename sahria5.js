@@ -82,8 +82,8 @@ function Alert(S)
 
     // start get month
     let element = S
-    let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+0.5
-    g=13-g
+    let g = Array.from(element.parentNode.childNodes).indexOf(element)
+    g=5-g
     document.querySelector(".alert-text").textContent=`! هل قام الطالب بدفع شهرية شهر ${g}`
     // end get month
 
@@ -179,14 +179,6 @@ document.querySelector("#addName").addEventListener("click", ()=>{
     `
     
     <tr>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
-        <td class="mo"></td>
         <td class="mo"></td>
         <td class="mo"></td>
         <td class="mo"></td>
