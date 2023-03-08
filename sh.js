@@ -37,7 +37,7 @@ function AlertTextDel(x)
     let name = x.childNodes[9].textContent;
 
     
-    document.querySelector("#alert-dad").style.display="block";
+    document.querySelector("#alert-dad").style.display="flex";
 
     document.querySelector(".alert-text").textContent=`
     هل تريد حذف
