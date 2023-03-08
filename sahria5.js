@@ -34,7 +34,7 @@ getAllDivs()
 
 function AlertTextDel(x)
 {
-    let name = x.childNodes[25].textContent;
+    let name = x.childNodes[9].textContent;
 
     
     document.querySelector("#alert-dad").style.display="block";
@@ -82,7 +82,7 @@ function Alert(S)
 
     // start get month
     let element = S
-    let g = Array.from(element.parentNode.childNodes).indexOf(element)
+    let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+1
     g=5-g
     document.querySelector(".alert-text").textContent=`! هل قام الطالب بدفع شهرية شهر ${g}`
     // end get month
