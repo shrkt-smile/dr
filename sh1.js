@@ -89,7 +89,7 @@ function Alert(S)
 
 
 
-    document.querySelector("#alert-dad").style.display="block";
+    document.querySelector("#alert-dad").style.display="flex";
     let yes = document.querySelector("#yes")
     let no = document.querySelector("#no")
 
