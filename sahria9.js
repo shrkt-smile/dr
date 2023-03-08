@@ -82,8 +82,8 @@ function Alert(S)
 
     // start get month
     let element = S
-    let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+1
-    g=g-2
+    let g = Array.from(element.parentNode.childNodes).indexOf(element)+0.5
+    g=5-g
     document.querySelector(".alert-text").textContent=`! هل قام الطالب بدفع شهرية شهر ${g}`
     // end get month
 
