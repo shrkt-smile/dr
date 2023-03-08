@@ -17,7 +17,8 @@ function AlertTextDel(x)
 let name = x.childNodes[25].textContent;    document.querySelector("#alert-dad").style.display="block"; document.querySelector(".alert-text").textContent=`
     هل تريد حذف
     ${name}
-    من قائمة الاسماء؟`
+    من قائمة الاسماء؟
+    `
 yes.addEventListener("click", ()=>{
 document.querySelector("#alert-dad").style.display="none";
 if(x!==""){
