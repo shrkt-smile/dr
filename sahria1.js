@@ -35,7 +35,7 @@ document.querySelector("#alert-dad").style.display="none";
 function Alert(S){
 let element = S
 let g = Array.from(element.parentNode.childNodes).indexOf(element)/2+0.5
-    g=13-g
+    g=5-g
 document.querySelector(".alert-text").textContent=`! هل قام الطالب بدفع شهرية شهر ${g}`
 document.querySelector("#alert-dad").style.display="block";
  let yes = document.querySelector("#yes")
