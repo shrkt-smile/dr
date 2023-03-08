@@ -183,8 +183,8 @@ document.querySelector("#addName").addEventListener("click", ()=>{
         <td class="mo"></td>
         <td class="mo"></td>
         <td class="mo"></td>
-        <td colspan="2" id="name">${newName}</td>
-        <td colspan="1" class="del">X</td>
+        <td id="name">${newName}</td>
+        <td class="del">X</td>
     </tr>
     
     `
